@@ -1,0 +1,75 @@
+<ion-header>
+  <app-header backBtn="true" title="Create Question"></app-header>
+  </ion-header>
+  
+
+<ion-content>
+
+  <app-logo></app-logo>
+  
+  <form>
+   
+    <ion-item>
+      <ion-label position="floating">Frage</ion-label>
+      <ion-textarea [autoGrow]="true" class="custom" type="text"  required></ion-textarea>
+    </ion-item>
+
+    <ion-row class="container">
+      <ion-item>
+        <ion-label position="floating">Antwort</ion-label>
+        <ion-textarea [autoGrow]="true" class="custom" type="text"  required></ion-textarea>
+      </ion-item>
+      
+        <ion-list>
+          <ion-item>
+            <ion-select interface="action-sheet" placeholder="w/f">
+              <ion-select-option value="wahr">wahr</ion-select-option>
+              <ion-select-option value="falsch">falsch</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      
+  
+    
+      
+      <ion-button>Add Answer</ion-button>
+
+    <ion-item *ngFor="let answer of Answers">
+      <ion-card >
+        <ion-card-header>
+          <ion-card-title>{{answer.answerVal}}</ion-card-title>
+          <ion-card-subtitle *ngIf="answer.value==true"><span class="banar true">{{answer.value}}</span></ion-card-subtitle>
+          <ion-card-subtitle *ngIf="answer.value==false"><span class="banar false">{{answer.value}}</span></ion-card-subtitle>
+
+        </ion-card-header>
+      
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      
+        <ion-button fill="full" routerLink="/editanswer">Edit</ion-button>
+        <!--For Edit button you can use  ionic modal >> https://ionicframework.com/docs/api/modal
+        or you can just delete the card and then make the input of adding answer with same text of the 
+      answer the user want to edit !! -->
+        <ion-button  color="danger">Delete</ion-button>
+      </ion-card>
+    
+    </ion-item>
+
+      
+
+  </ion-row>
+
+  <errors-msg error="Please add some answers!! "></errors-msg>
+
+
+    <ion-row> 
+      <ion-col>
+        <ion-button type="submit" color="primary"  expand="block" routerLink="/packages-list">Create Question</ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </form>  
+
+</ion-content>

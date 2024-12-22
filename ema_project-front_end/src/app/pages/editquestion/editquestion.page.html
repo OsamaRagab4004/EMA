@@ -1,0 +1,73 @@
+  <ion-header>
+    <app-header backBtn="true" title="Question Details"></app-header>
+  </ion-header>
+    
+
+
+
+<ion-content>
+
+  <!--Question-->
+
+
+  <ion-card class="deleteQ" (click)="presentAlert()">
+    <ion-button color="dark">Delete This Question</ion-button>
+  </ion-card>
+  <!--Just for testing **************-->
+  <p>{{ handlerMessage }}</p>
+  <p>{{ roleMessage }}</p>
+  <!--*******************************-->
+
+
+
+  <ion-card class="qcard">
+
+    <ion-card-header>
+      <ion-card-subtitle>Edit  this Question :</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  
+    <ion-button color="primary" routerLink="/detailed-edit-question">Edit</ion-button>
+  
+
+
+  </ion-card>
+
+
+
+  <!--Answers-->
+
+
+
+
+ <ion-card *ngFor="let answer of Answers">
+
+    <ion-card-header>
+      <ion-card-subtitle>Edit  this Answer :</ion-card-subtitle>
+      <span *ngIf="answer.val==true" class="wahr">Wahr</span>
+      <span *ngIf="answer.val==false" class="falsch">Falsch</span>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{answer.text}}
+    </ion-card-content>
+  
+    <ion-button color="primary" routerLink="/editanswer">Edit</ion-button>
+    <ion-button color="danger">Delete the answer</ion-button>
+
+
+  </ion-card>
+
+
+
+  <!--Delete The Question-->
+
+  
+
+
+  <app-space marginBottom="70px"></app-space>
+  <app-tab home="/home"  settings="/editpackage" add="/add-new-answer"></app-tab>
+</ion-content>

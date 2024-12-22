@@ -1,0 +1,38 @@
+<ion-header>
+  <app-header backBtn="true" title="Create Package"></app-header>
+  </ion-header>
+  
+
+<ion-content>
+  <app-logo></app-logo>
+  
+  <form>
+   
+    <ion-item>
+      <ion-label position="floating">Title des Packages</ion-label>
+      <ion-input class="custom" type="text"  required></ion-input>
+    </ion-item>
+
+    <ion-item class="textarea">
+      <ion-label position="floating">Beschreibung</ion-label>
+      <ion-textarea [autoGrow]="true"></ion-textarea>
+    </ion-item>
+
+
+    <ion-item class="publish">
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Publish as public</ion-label>
+    </ion-item>
+
+
+
+    <ion-row> 
+      <ion-col>
+        <ion-button type="submit" color="primary"  expand="block" routerLink="/packages-list">Create Package<ion-icon name="enter-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </form>  
+
+</ion-content>

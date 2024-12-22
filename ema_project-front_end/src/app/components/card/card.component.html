@@ -1,0 +1,27 @@
+<!--
+@routerLink :: https://stackoverflow.com/questions/41370760/difference-between-routerlink-and-routerlink
+
+-->
+
+
+
+<ion-card [routerLink]= 'arrowLink'>
+  <ion-card-header>
+    <ion-card-title>
+      <span class="package_title">{{cardTitle}}</span>
+      <ion-button *ngIf="arrowActivated"   fill="clear" class="package_arrow_button">  <ion-icon name="chevron-forward"></ion-icon></ion-button>
+    </ion-card-title>
+    <ion-card-subtitle *ngIf="questionsNumber" class="question_num"> {{questionsNumber}} Fragen</ion-card-subtitle>
+
+    <ion-card-subtitle class="card_details">{{cardText}}</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    
+    <ion-item *ngIf="public" fill="clear" color="primary">Public</ion-item>
+    <ion-item *ngIf="private" fill="clear">Private</ion-item>
+    <ion-item class="passed" *ngIf="passed" fill="clear" color="success">Bestanden</ion-item>
+    <ion-item class="notPassed" *ngIf="notPassed" fill="clear" color="danger">Nicht Bestanden</ion-item>
+  </ion-card-content>
+
+</ion-card>  

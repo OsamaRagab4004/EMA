@@ -1,0 +1,13 @@
+<ion-row>
+  <ion-col>
+    <p>
+      <ion-icon *ngIf="error" name="warning-outline"></ion-icon>
+      {{error}}
+    </p>
+    <p *ngFor="let err of errors">
+      <ion-icon *ngIf="errors" name="warning-outline"></ion-icon>
+      {{err}}
+    </p>
+  </ion-col>
+</ion-row>
+

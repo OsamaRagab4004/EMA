@@ -1,0 +1,15 @@
+<ion-header>
+  <app-header backBtn="true" title="Editiermodus"></app-header>
+</ion-header>
+  
+
+
+<ion-content>
+
+
+<app-card *ngFor="let question of questions; index as i;" cardTitle="{{question.title}}" cardText="" questionsNumber="" arrowLink='/editquestion' [private]="" [public]="" [arrowActivated]="false"></app-card>
+
+
+  <app-space marginBottom="70px"></app-space>
+  <app-tab home="/home"  settings="/editpackage" add="/create-question"></app-tab>
+</ion-content>

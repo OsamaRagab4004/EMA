@@ -1,0 +1,46 @@
+<ion-header>
+  <app-header backBtn="true" title="Login"></app-header>
+  </ion-header>
+  
+
+<ion-content>
+
+
+  <app-logo></app-logo>
+  <!--It can take two type of parameters : array of errors, or just an error as variable -->
+  <errors-msg [errors]="errors" error=""></errors-msg>
+
+  <ion-row class="container">
+    <h1> Log In</h1>  
+  </ion-row>
+  
+  <form>
+   
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input class="custom" type="text" #email required></ion-input>
+    </ion-item>
+
+    <ion-item >
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+
+    <ion-row class="container">
+      <ion-button class="forget_password" fill="clear" color="primary" routerLink="/forget-password" >Forget Password?</ion-button>
+    </ion-row>
+
+    <ion-item class="remember_me">
+      <ion-checkbox slot="start"></ion-checkbox>
+      <ion-label>Remember Me!</ion-label>
+    </ion-item>
+
+
+
+    <ion-row> 
+      <ion-col>
+        <ion-button type="submit" color="primary"  expand="block" routerLink="/packages-list">Log in<ion-icon name="enter-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

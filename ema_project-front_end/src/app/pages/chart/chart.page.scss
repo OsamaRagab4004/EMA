@@ -1,0 +1,23 @@
+#chart {
+  padding: 0;
+  width: 30%;
+  margin:  auto;
+}
+
+h1 , p {
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  #chart {
+    padding: 0;
+    margin: 0px 0px !important;
+  }
+}

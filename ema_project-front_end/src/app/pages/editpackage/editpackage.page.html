@@ -1,0 +1,44 @@
+<ion-header>
+  <app-header backBtn="true" title="Edit XYZ Package"></app-header>
+</ion-header>
+
+<ion-content>
+<app-logo></app-logo>
+<app-text header="Update the Package:" marginBottom="15px"></app-text>
+<form>
+   
+  <ion-item>
+    <ion-label position="floating">Title des Packages</ion-label>
+    <ion-input class="custom" type="text"  required></ion-input>
+  </ion-item>
+
+  <ion-item class="textarea">
+    <ion-label position="floating">Beschreibung</ion-label>
+    <ion-textarea [autoGrow]="true"></ion-textarea>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Select private/public" interface="action-sheet">
+        <ion-select-option value="private">Private Package</ion-select-option>
+        <ion-select-option value="public">Public Package</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-row> 
+    <ion-col>
+      <ion-button type="submit" color="primary"  expand="block" routerLink="/packages-list">Update the Package</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</form>  
+
+
+
+
+</ion-content>

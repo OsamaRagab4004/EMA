@@ -1,0 +1,56 @@
+$card-background : rgb(255, 156, 13);
+$package_title_color : black;
+$card_details_text_color:black;
+$package_arrow_color: white;
+$package_arrow_size : 50px;
+$border_radius_of_buttons_in_Card : 15%;
+$border_color_of_buttons_in_Card : black;
+$border_width_of_buttons_in_Card : 1px;
+
+
+
+
+div.line{ 
+    width:97%;
+    height: 2px;
+    background-color: black;
+    margin: 40px auto;
+}
+
+ion-card {
+
+    background-color: $card-background;
+    ion-card-header {
+      ion-card-title {
+        span.package_title {
+            color: $package_title_color ;
+        }
+        
+        display: flex;
+        justify-content: space-between;
+
+        ion-icon {
+            color: $package_arrow_color;
+            font-size: $package_arrow_size;
+        }
+      }
+
+      ion-card-subtitle.card_details {
+        color: $card_details_text_color;
+      }
+    }
+
+    ion-card-content {
+        display: flex;
+        justify-content:flex-start;
+
+        
+
+        
+    }
+
+
+
+
+
+}

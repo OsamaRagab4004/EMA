@@ -1,0 +1,7 @@
+{
+  "name": "ema_project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

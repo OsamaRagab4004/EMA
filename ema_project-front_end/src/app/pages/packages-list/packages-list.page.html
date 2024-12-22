@@ -1,0 +1,32 @@
+<ion-header>
+  <app-header title="Packages List"></app-header>
+
+  <div class="filter-btn-container">
+     <ion-list>
+      <ion-item>
+        <ion-select placeholder="Filter auswählen"
+        (ionChange)="handleChange($event)"
+        (ionCancel)="pushCancell()"
+        (ionDismiss)="pushDismiss()"
+        >
+          <ion-select-option value="all">Alle Sammlungen</ion-select-option>
+          <ion-select-option value="bearbeitet">Bearbeitet</ion-select-option>
+          <ion-select-option value="unbearbeitet">Unbearbeitet</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+ 
+</ion-header>
+  
+
+<ion-content>
+
+   <app-tab></app-tab>
+
+   <app-card *ngFor="let card of Cards; index as i;" cardTitle="{{card.name}}" cardText="" questionsNumber="{{card.question_num}}" arrowLink='/package-details' [private]="card.private" [public]="card.public" [arrowActivated]="true" [passed]="false" [notPassed]="true"></app-card>
+
+   <app-tab home="/home" add="/create-package"></app-tab>
+   <app-space marginBottom="100px"></app-space>
+   
+</ion-content>

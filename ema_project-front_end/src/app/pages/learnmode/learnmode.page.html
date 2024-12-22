@@ -1,0 +1,27 @@
+<ion-header>
+  <app-header backBtn="true" title="Lernmodus"></app-header>
+</ion-header>
+  
+<ion-content>
+
+  <!--The Question-->
+  <app-card cardTitle="What is ipsum lorem text amet?" questionsNumber="1/5"></app-card>
+
+
+  <!--Answers-->
+
+<!--For correct answer just make the color of <p> tag green and wrong answers with red color-->
+
+  <ion-item *ngFor="let answer of Answers">
+    <ion-checkbox slot="start"></ion-checkbox>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </ion-item>
+
+
+  
+
+<ion-button routerLink="/chart">Weiter</ion-button>
+
+
+  <app-space marginBottom="100px"></app-space>
+</ion-content>

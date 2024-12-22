@@ -1,0 +1,45 @@
+ion-card {
+
+
+     span {
+        padding: 5px;
+        display: block;
+        color: white;
+        font-size: 18px;
+        font-weight: bolder;
+        width: 30%;
+        text-align: center;
+        border-radius: 30px;
+     }
+
+     span.wahr {
+        background-color: green;
+     }
+     span.falsch {
+        background-color: red;
+     }
+
+     ion-button {
+        
+        width: 100%;
+        padding: 6px;
+    }
+    background-color: rgb(255, 156, 13);
+    ion-card-header {
+        ion-card-subtitle {
+        color: whitesmoke;
+        font-size: 15px;
+        text-transform: uppercase;
+        }
+    }
+}
+
+ion-card.deleteQ {
+    background-color: grey !important;
+}
+
+ion-card.qcard {
+    background-color: grey !important;
+    color: whitesmoke;
+    font-weight: bold;
+}

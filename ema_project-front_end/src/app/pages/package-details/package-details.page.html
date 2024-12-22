@@ -1,0 +1,29 @@
+<ion-header>
+  <app-header backBtn="true" title="Package Details"></app-header>
+</ion-header>
+  
+
+
+<ion-content>
+
+ 
+
+  <app-card cardTitle="Package Name" cardText="Lorem ipsum dolor sit amet, ..." questionsNumber=""  [private]="false" [public]="false" [arrowActivated]="false"></app-card>
+
+  
+
+<div class="line"></div>
+
+
+  <app-card cardTitle="Editiermodus" cardText="" questionsNumber="" arrowLink='/editmode' [private]="false" [public]="false" [arrowActivated]="true"></app-card>
+
+
+  <app-card cardTitle="Lernmodus" cardText="" questionsNumber="" arrowLink='/learnmode' [private]="false" [public]="false" [arrowActivated]="true"></app-card>
+
+
+  <app-card cardTitle="Prufungsmodus" cardText="" questionsNumber="" arrowLink='/exammode' [private]="false" [public]="false" [arrowActivated]="true"></app-card>
+
+  <app-tab home="/home" add="/create-question" settings="/editpackage"></app-tab>
+  <app-space marginBottom="100px"></app-space>
+  
+</ion-content>

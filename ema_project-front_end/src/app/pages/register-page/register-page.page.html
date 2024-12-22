@@ -1,0 +1,37 @@
+<ion-header>
+<app-header backBtn="true" title="Register"></app-header>
+</ion-header>
+
+
+<ion-content>
+  
+  <app-logo></app-logo>
+
+
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">First name</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Last name</ion-label>
+      <ion-input type="text" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    
+    <ion-row>
+
+      <ion-col>
+        <ion-button type="submit" color="primary" (click)="signUp(email,password)"  expand="block">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>
