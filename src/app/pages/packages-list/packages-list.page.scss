@@ -1,52 +1,11 @@
-$card-background : rgb(255, 156, 13);
-$package_title_color : black;
-$questions_number_text_color:white;
-$package_arrow_color: white;
-$package_arrow_size : 50px;
-$border_radius_of_buttons_in_Card : 15%;
-$border_color_of_buttons_in_Card : black;
-$buttons_in_card_right_margin :20px;
-$border_width_of_buttons_in_Card : 1px;
+.filter-btn-container {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
 
-
-ion-card {
-
-    background-color: $card-background;
-    ion-card-header {
-      ion-card-title {
-        span.package_title {
-            color: $package_title_color ;
-        }
-        
-        display: flex;
-        justify-content: space-between;
-
-        ion-icon {
-            color: $package_arrow_color;
-            font-size: $package_arrow_size;
-        }
-      }
-
-      ion-card-subtitle.question_num {
-        color: $questions_number_text_color;
-      }
-    }
-
-    ion-card-content {
-        display: flex;
-        justify-content:flex-start;
-
-        ion-item {
-            border: $border_width_of_buttons_in_Card solid border_color_of_buttons_in_Card;
-            border-radius: $border_radius_of_buttons_in_Card;
-            margin-right: $buttons_in_card_right_margin;
-        }
-
+    ion-list {
+        width: 50%;
         
     }
-
-
-
-
-
 }

@@ -1,7 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>packageDetails</ion-title>
-  </ion-toolbar>
+  <app-header backBtn="true" title="Package Details"></app-header>
 </ion-header>
 
 
@@ -9,82 +7,23 @@
 <ion-content>
 
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        <span class="package_title">Package Name</span>
-      </ion-card-title>
-      <ion-card-subtitle class="card_details">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      
-    </ion-card-content>
 
-  </ion-card>  
+  <app-card cardTitle="{{(module | async)?.mdName}}" cardText="{{(module | async)?.description}}" questionsNumber=""  [private]="false" [public]="false" [arrowActivated]="false"></app-card>
+
+
 
 <div class="line"></div>
 
 
-
-  
-
+  <app-card cardTitle="Editiermodus" cardText="" questionsNumber="" arrowLink='{{"/editmode/" + (module | async)?.mdId}}' [private]="false" [public]="false" [arrowActivated]="true"></app-card>
 
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        <span class="package_title">Editiermodus</span>
-        <ion-button fill="clear" class="package_arrow_button">  <ion-icon name="chevron-forward"></ion-icon></ion-button>
-      </ion-card-title>
-
-    </ion-card-header>
-  
-    <ion-card-content>
-    
-    </ion-card-content>
-
-  </ion-card>  
+  <app-card cardTitle="Lernmodus" cardText="" questionsNumber="" (click)="gotoLearnmode()"  [private]="false" [public]="false" [arrowActivated]="true"></app-card>
 
 
+  <app-card cardTitle="Prufungsmodus" cardText="" questionsNumber="" (click)="gotoExammode()"  [private]="false" [public]="false" [arrowActivated]="true"></app-card>
 
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        <span class="package_title">Lernmodus</span>
-        <ion-button fill="clear" class="package_arrow_button">  <ion-icon name="chevron-forward"></ion-icon></ion-button>
-      </ion-card-title>
-
-    </ion-card-header>
-  
-    <ion-card-content>
-    
-    </ion-card-content>
-
-  </ion-card>  
-
-
-
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>
-        <span class="package_title">Prufungsmodus</span>
-        <ion-button fill="clear" class="package_arrow_button">  <ion-icon name="chevron-forward"></ion-icon></ion-button>
-      </ion-card-title>
-
-    </ion-card-header>
-  
-    <ion-card-content>
-    
-    </ion-card-content>
-
-  </ion-card>  
-
-
-  
-  
-  
+  <app-tab home="/home" add="{{'/create-question/' + (module | async)?.mdId}}" settings="{{'/editpackage/' + (module | async)?.mdId}}"></app-tab>
+  <app-space marginBottom="100px"></app-space>
 
 </ion-content>

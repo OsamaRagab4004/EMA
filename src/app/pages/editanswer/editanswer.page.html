@@ -1,0 +1,40 @@
+<ion-header>
+  <app-header backBtn="true" title="Edit XYZ Answer"></app-header>
+</ion-header>
+
+<ion-content>
+<app-logo></app-logo>
+<app-text header="Update the Answer:" marginBottom="15px"></app-text>
+<form>
+
+
+  <ion-item class="textarea">
+    <ion-label position="floating">The Answer</ion-label>
+    <ion-textarea [(ngModel)]="newAnswer" name="newAnswer" value="{{(answerAsObservable | async)?.answer}}" [autoGrow]="true"></ion-textarea>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-select [(ngModel)]="newCorrect" name="newCorrect" placeholder="Select wahr/falsch" interface="action-sheet">
+        <ion-select-option value="{{true}}">Wahr</ion-select-option>
+        <ion-select-option value="{{false}}">Falsch</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" color="primary" (click)="updateAnswer(newAnswer, newCorrect)" routerLink="/packages-list" expand="block">Update the Answer</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</form>
+
+
+
+
+</ion-content>

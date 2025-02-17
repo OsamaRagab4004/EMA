@@ -1,0 +1,27 @@
+<ion-header>
+  <app-header backBtn="true" title="Prufungsmodus"></app-header>
+</ion-header>
+
+<ion-content>
+
+  <!--The Question-->
+  <app-card cardTitle="{{(questionName | async)?.fragen}}" questionsNumber="{{(numQuestion | async)+1 + '/' + (questionList | async)?.length}}"></app-card>
+
+
+  <!--Answers-->
+
+<!--For correct answer just make the color of <p> tag green and wrong answers with red color-->
+
+  <ion-item *ngFor="let answer of answersList | async">
+    <ion-checkbox (ionChange)="getCheckBox($event, answer)" slot="start"></ion-checkbox>
+    <p>{{answer.answer}}</p>
+  </ion-item>
+
+
+
+
+<ion-button (click)="submitRes()">Weiter</ion-button>
+
+
+  <app-space marginBottom="100px"></app-space>
+</ion-content>

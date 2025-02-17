@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
 import { PackageDetailsPage } from './package-details.page';
 
 describe('PackageDetailsPage', () => {
@@ -9,7 +8,7 @@ describe('PackageDetailsPage', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ PackageDetailsPage ],
+      declarations: [ PackageDetailsPage],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 

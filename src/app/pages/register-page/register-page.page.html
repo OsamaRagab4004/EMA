@@ -1,0 +1,31 @@
+<ion-header>
+<app-header backBtn="true" title="Register"></app-header>
+</ion-header>
+
+
+<ion-content>
+
+  <app-logo></app-logo>
+
+
+  <form  [formGroup]="credentials">
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" formControlName="email" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" formControlName="password" required></ion-input>
+      <ion-note slot="error" *ngIf="(password.dirty || password.touched) && password.errors"> Passwort muss mind. 6 Zeichen lang sein!</ion-note>
+    </ion-item>
+
+    <ion-row>
+
+      <ion-col>
+        <ion-button type="submit" color="primary" (click)="signUp(email,password)"  expand="block">Sign Up</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <errors-msg error="{{error}}"></errors-msg>
+
+</ion-content>

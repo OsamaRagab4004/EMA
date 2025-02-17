@@ -1,0 +1,46 @@
+<ion-header>
+  <app-header backBtn="true" title="Edit Package"></app-header>
+</ion-header>
+
+<ion-content>
+<app-logo></app-logo>
+<app-text header="Update the Package:" marginBottom="15px"></app-text>
+<form>
+
+  <ion-item>
+    <ion-label position="floating">Title des Packages</ion-label>
+    <ion-input name="editModuleName" [(ngModel)]="editModuleName" #name value="{{(module | async)?.mdName}}" class="custom" type="text"  required></ion-input>
+  </ion-item>
+
+  <ion-item class="textarea">
+    <ion-label position="floating">Beschreibung</ion-label>
+    <ion-textarea [(ngModel)]="editDescription" name="editDescription" #descr value="{{(module | async)?.description}}" [autoGrow]="true"></ion-textarea>
+  </ion-item>
+
+
+  <ion-list *ngIf="isUser === (module | async)?.createdBy">
+    <ion-item >
+      <ion-select [(ngModel)]="editPublish"  (ionChange)="handleChange($event)" value="{{(module | async)?.public}}" name="editPublish" placeholder="Select private/public" interface="action-sheet">
+        <ion-select-option value="{{false}}">Private Package</ion-select-option>
+        <ion-select-option value="{{true}}">Public Package</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-row>
+    <ion-col>
+      <ion-button type="submit" color="primary" (click)="updateModule(name.value, descr.value, editPublish)" expand="block" routerLink="/packages-list">Update the Package</ion-button>
+      <ion-button type="submit" color="primary" (click)="resetModule()" expand="block" routerLink="/packages-list">Reset Package</ion-button>
+      <ion-button *ngIf="isUser === (module | async)?.createdBy" type="submit" color="primary" (click)="deleteModule()" expand="block" routerLink="/packages-list">Delete Package</ion-button>
+    </ion-col>
+  </ion-row>
+
+
+</form>
+
+
+
+
+</ion-content>

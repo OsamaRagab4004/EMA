@@ -1,0 +1,32 @@
+
+<!--<app-tab home="/home" add="/create-package"></app-tab>-->
+
+  <ion-row>
+
+    <div *ngIf="home" [routerLink]="home">
+    <ion-icon name="home"></ion-icon>
+    <p>Home</p>
+   </div>
+
+
+
+  <div *ngIf="add" [routerLink]="add">
+    <ion-icon name="add-circle"></ion-icon>
+    <p>Add</p>
+  </div>
+
+  <div *ngIf="settings" [routerLink]="settings">
+    <ion-icon name="settings"></ion-icon>
+    <p>Settings</p>
+  </div>
+
+
+  <div *ngIf="logout" (click)="signOut()">
+    <ion-icon name="log-out"></ion-icon>
+    <p>Logout</p>
+  </div>
+
+
+
+
+  </ion-row>

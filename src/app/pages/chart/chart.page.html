@@ -1,0 +1,27 @@
+<ion-header>
+  <app-header  title="Your Progress"></app-header>
+</ion-header>
+
+<ion-content>
+
+<h1>Your progress !</h1>
+<p>You answered {{this.correct}}/{{this.correctList.length}}  Questions right!</p>
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [plotOptions]="chartOptions.plotOptions"
+    [labels]="chartOptions.labels"
+  ></apx-chart>
+</div>
+
+
+
+
+
+<app-tab home="/packages-list"></app-tab>
+<app-space marginBottom="100px"></app-space>
+
+</ion-content>

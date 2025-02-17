@@ -1,0 +1,27 @@
+ion-item {
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    border: 2px solid rgb(255, 156, 13);
+    border-radius: 5px;
+}
+
+ion-checkbox {
+    --background-checked : rgb(255, 156, 13);
+    --border-color : rgb(255, 156, 13);
+    --border-radius : 5px;
+    --checkmark-color : black;
+    --checkmark-width: 3px;
+    --transition:.4s;
+
+}
+
+
+ion-button {
+    position: fixed;
+    bottom: 0;
+    left:10%;
+    z-index: 100000;
+    width: 80%;
+    
+}

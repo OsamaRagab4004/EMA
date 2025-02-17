@@ -1,30 +1,38 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Register</ion-title>
-  </ion-toolbar>
-</ion-header>
+  <app-header backBtn="true" title="Login"></app-header>
+  </ion-header>
+
 
 <ion-content>
+
+
+  <app-logo></app-logo>
+  <!--It can take two type of parameters : array of errors, or just an error as variable -->
+  <errors-msg  [error]="errorMessage"></errors-msg>
+
+  <ion-row class="container">
+    <h1> Log In</h1>
+  </ion-row>
+
   <form>
-    <ion-item lines="full">
-      <ion-label position="floating">First name</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Last name</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
+
+    <ion-item>
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
+      <ion-input class="custom" type="text" #email required></ion-input>
     </ion-item>
-    <ion-item lines="full">
+
+    <ion-item >
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password" #password required></ion-input>
     </ion-item>
+
+    <ion-row class="container">
+      <ion-button class="forget_password" fill="clear" color="primary" routerLink="/forget-password" >Forget Password?</ion-button>
+    </ion-row>
+
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" (click)="signUp(email,password)"  expand="block">Sign Up</ion-button>
+        <ion-button type="submit" color="primary"  expand="block" (click)="signIn(email,password)">Log in<ion-icon name="enter-outline"></ion-icon></ion-button>
       </ion-col>
     </ion-row>
   </form>

@@ -1,0 +1,39 @@
+ion-item {
+    margin: auto;
+    width: 90% !important;
+    margin-bottom: 10px;
+    border: .5px solid black;
+    border-radius: 6px;
+
+}
+
+
+ion-item.textarea  ion-textarea{
+    min-height: 100px;
+    
+}
+
+ion-button[type=submit] {
+width: 80%;
+margin: auto;
+margin-top: 20px;
+}
+
+ion-button.forget_password{
+margin-top: 15px;    
+}
+
+ion-row.container {
+    width: 90% !important;
+    margin: auto;
+    border: 0px !important;
+    outline: none !important;
+}
+
+
+
+ion-icon {
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 5px;
+}

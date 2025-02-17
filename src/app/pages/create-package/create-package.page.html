@@ -1,0 +1,39 @@
+<ion-header>
+  <app-header backBtn="true" title="Create Package"></app-header>
+  </ion-header>
+
+
+<ion-content>
+  <app-logo></app-logo>
+  <errors-msg error="{{error}}"></errors-msg>
+  <form>
+
+    <ion-item>
+      <ion-label position="floating">Title des Packages</ion-label>
+      <ion-input class="custom" type="text" [(ngModel)]="title" name="title" required></ion-input>
+      <ion-note slot="error" *ngIf="title === ''">Schreiben Sie einen Titel!</ion-note>
+    </ion-item>
+
+    <ion-item class="textarea">
+      <ion-label position="floating">Beschreibung</ion-label>
+      <ion-textarea [(ngModel)]="description" name="description" [autoGrow]="true"></ion-textarea>
+    </ion-item>
+
+
+    <ion-item class="publish">
+      <ion-checkbox [(ngModel)]="publishCheckBox" name="publishCheckBox" slot="start"></ion-checkbox>
+      <ion-label>Publish as public</ion-label>
+    </ion-item>
+
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary"  expand="block" (click)="addPackage(title,publishCheckBox, description)" >Create Package<ion-icon name="enter-outline"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+
+
+  </form>
+
+</ion-content>
